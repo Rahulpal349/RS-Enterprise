@@ -34,8 +34,12 @@ export default function Contact() {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-secondary text-lg">Phone</h4>
-                  <p className="text-slate-600">8515902364</p>
+                  <h4 className="font-bold text-secondary text-lg">Phone & WhatsApp</h4>
+                  <p className="text-slate-600">
+                    <a href="https://wa.me/918515902364" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">
+                      +91 8515902364
+                    </a>
+                  </p>
                 </div>
               </div>
 

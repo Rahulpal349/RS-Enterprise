@@ -19,6 +19,12 @@ const TwitterIcon = ({ size = 20 }) => (
   </svg>
 );
 
+const WhatsappIcon = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="relative text-white pt-16 pb-8 border-t-[10px] border-primary overflow-hidden">
@@ -48,6 +54,7 @@ export default function Footer() {
               <a href="#" className="text-slate-400 hover:text-primary transition-colors"><FacebookIcon size={20} /></a>
               <a href="#" className="text-slate-400 hover:text-primary transition-colors"><InstagramIcon size={20} /></a>
               <a href="#" className="text-slate-400 hover:text-primary transition-colors"><TwitterIcon size={20} /></a>
+              <a href="https://wa.me/918515902364" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-green-500 transition-colors" title="Chat on WhatsApp"><WhatsappIcon size={20} /></a>
             </div>
           </div>
 
@@ -76,7 +83,11 @@ export default function Footer() {
           <div>
             <h4 className="text-primary font-bold uppercase tracking-widest text-sm mb-6">Contact Us</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li>+91 8515902364</li>
+              <li>
+                <a href="https://wa.me/918515902364" target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition-colors flex items-center gap-2">
+                  <WhatsappIcon size={16} /> +91 8515902364
+                </a>
+              </li>
               <li>rsenterpris85@gmail.com</li>
               <li>Andal Gram, Dhubchururia,<br/>Durgapur, Paschim Bardhaman<br/>West Bengal, 713321</li>
               <li className="pt-2 text-primary">GSTN: 19AKFR3327G1ZO</li>
