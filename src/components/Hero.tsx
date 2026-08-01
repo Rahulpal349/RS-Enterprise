@@ -16,7 +16,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-slate-900/70"></div> {/* Dark Overlay */}
         {/* Gradient Mask to blend with the next section (slate-50) */}
-        <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

@@ -673,6 +673,9 @@ video {
 .h-32 {
   height: 8rem;
 }
+.h-24 {
+  height: 6rem;
+}
 .min-h-\[600px\] {
   min-height: 600px;
 }
