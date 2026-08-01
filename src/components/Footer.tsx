@@ -21,8 +21,19 @@ const TwitterIcon = ({ size = 20 }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white pt-16 pb-8 border-t-[10px] border-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="relative text-white pt-16 pb-8 border-t-[10px] border-primary overflow-hidden">
+      {/* Background Image Placeholder */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/footer-bg.jpg')", // Ensure footer-bg.jpg exists in public folder
+          backgroundColor: "#1e293b" // Fallback color
+        }}
+      >
+        <div className="absolute inset-0 bg-slate-900/80"></div> {/* Dark Overlay for text readability */}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
@@ -44,10 +55,10 @@ export default function Footer() {
             <h4 className="text-primary font-bold uppercase tracking-widest text-sm mb-6">Quick Links</h4>
             <ul className="space-y-3 text-sm text-slate-400">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="#about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="#services" className="hover:text-white transition-colors">Services</Link></li>
               <li><Link href="#projects" className="hover:text-white transition-colors">Projects</Link></li>
-              <li><Link href="#contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+              <li><Link href="/quote" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 

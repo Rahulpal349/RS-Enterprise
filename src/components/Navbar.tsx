@@ -1,18 +1,20 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "#about" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/quote" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,11 +24,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHome = pathname === "/";
+  const navClass = (scrolled || !isHome)
+    ? "bg-secondary text-white shadow-lg"
+    : "bg-transparent text-white";
+
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-secondary text-white shadow-lg" : "bg-transparent text-white"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${navClass}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
