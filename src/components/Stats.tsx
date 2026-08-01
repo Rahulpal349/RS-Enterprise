@@ -5,17 +5,17 @@ import { CheckCircle, Users, Clock, Award } from "lucide-react";
 const stats = [
   {
     icon: <CheckCircle size={40} />,
-    value: "100+",
+    value: "10+",
     label: "Projects Completed",
   },
   {
     icon: <Users size={40} />,
-    value: "50+",
+    value: "10+",
     label: "Happy Clients",
   },
   {
     icon: <Clock size={40} />,
-    value: "10+",
+    value: "2+",
     label: "Years of Experience",
   },
   {

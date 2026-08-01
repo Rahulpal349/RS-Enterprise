@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -26,7 +27,7 @@ export default function Navbar() {
 
   const isHome = pathname === "/";
   const navClass = (scrolled || !isHome)
-    ? "bg-secondary text-white shadow-lg"
+    ? "bg-secondary dark:bg-slate-950 text-white shadow-lg"
     : "bg-transparent text-white";
 
   return (
@@ -51,6 +52,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            <ThemeToggle />
             <Link
               href="/quote"
               className="bg-primary text-secondary px-6 py-2 rounded font-bold hover:bg-yellow-400 transition-colors uppercase tracking-wider text-sm flex items-center gap-2"
@@ -59,7 +61,8 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-4">
+            <ThemeToggle />
             <button onClick={() => setIsOpen(!isOpen)} className="text-white hover:text-primary">
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -73,7 +76,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-secondary text-white"
+            className="md:hidden bg-secondary dark:bg-slate-900"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => (
