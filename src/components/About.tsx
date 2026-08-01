@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white dark:bg-slate-950 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
@@ -36,13 +36,13 @@ export default function About() {
               <h2 className="text-primary font-bold uppercase tracking-widest text-sm">About Us</h2>
             </div>
             
-            <h3 className="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
+            <h3 className="text-3xl md:text-5xl font-bold text-secondary dark:text-slate-100 mb-6 leading-tight">
               Building Trust.<br/>
               Delivering Quality.<br/>
               Supplying Excellence.
             </h3>
             
-            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
+            <div className="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
               <p>
                 <strong>R. S. Enterprise</strong> is a trusted Civil Construction and General Order Supplier based in Andal Gram, Durgapur, West Bengal. Founded by Mr. Subrata Gorai, an entrepreneur committed to quality and customer satisfaction, we provide reliable construction solutions and timely supply services for residential, commercial, and industrial projects.
               </p>

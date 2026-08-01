@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-slate-50 text-secondary relative">
+    <section id="services" className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors relative">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -60,11 +60,13 @@ export default function Services() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-primary transition-all group"
+              className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700 group"
             >
-              <div className="text-primary mb-6">{service.icon}</div>
-              <h4 className="text-xl font-bold mb-3">{service.title}</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">{service.description}</p>
+              <div className="text-primary mb-6 group-hover:scale-110 transition-transform origin-left">
+                {service.icon}
+              </div>
+              <h4 className="text-xl font-bold text-secondary dark:text-slate-100 mb-3">{service.title}</h4>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

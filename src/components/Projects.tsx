@@ -10,7 +10,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-slate-950 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
@@ -19,7 +19,7 @@ export default function Projects() {
             <h2 className="text-primary font-bold uppercase tracking-widest text-sm">Our Projects</h2>
             <div className="h-[2px] w-12 bg-primary"></div>
           </div>
-          <h3 className="text-3xl md:text-5xl font-bold text-secondary">
+          <h3 className="text-3xl md:text-5xl font-bold text-secondary dark:text-slate-100">
             Recent Work
           </h3>
         </div>
@@ -40,7 +40,7 @@ export default function Projects() {
                   <span className="font-mono text-sm bg-white/80 px-2 py-1 rounded">{project.image}</span>
                 </div>
               </div>
-              <h4 className="text-lg font-bold text-secondary text-center">{project.title}</h4>
+              <h4 className="text-lg font-bold text-secondary dark:text-slate-200 text-center">{project.title}</h4>
             </motion.div>
           ))}
         </div>

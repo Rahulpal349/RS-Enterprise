@@ -47,7 +47,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
             <h2 className="text-primary font-bold uppercase tracking-widest text-sm">Why Choose Us</h2>
             <div className="h-[2px] w-12 bg-primary"></div>
           </div>
-          <h3 className="text-3xl md:text-5xl font-bold text-secondary">
+          <h3 className="text-3xl md:text-5xl font-bold text-secondary dark:text-slate-100">
             Reasons to Work With Us
           </h3>
         </div>
@@ -69,13 +69,13 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 flex flex-col items-center text-center group"
+              className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center group"
             >
-              <div className="text-primary mb-6 p-4 rounded-full bg-slate-50 group-hover:bg-primary group-hover:text-secondary transition-colors">
+              <div className="text-primary mb-6 p-4 rounded-full bg-slate-50 dark:bg-slate-900 group-hover:bg-primary group-hover:text-secondary transition-colors">
                 {reason.icon}
               </div>
-              <h4 className="text-xl font-bold text-secondary mb-3">{reason.title}</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">{reason.description}</p>
+              <h4 className="text-xl font-bold text-secondary dark:text-slate-100 mb-3">{reason.title}</h4>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{reason.description}</p>
             </motion.div>
           ))}
         </div>

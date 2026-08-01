@@ -16,7 +16,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-slate-900/70"></div> {/* Dark Overlay */}
         {/* Gradient Mask to blend with the next section (slate-50) */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-slate-50 dark:from-slate-900 to-transparent pointer-events-none"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -34,7 +34,7 @@ export default function Hero() {
             <span className="text-primary">FOR BETTER TOMORROWS</span>
           </h1>
           
-          <p className="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed">
+          <p className="text-white drop-shadow-md font-medium text-lg md:text-xl max-w-2xl leading-relaxed">
             RS ENTERPRISE is a trusted construction company delivering high-quality building solutions for homes, offices, and commercial spaces.
           </p>
         </motion.div>
