@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function QuotePage() {
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen pt-16 sm:pt-20">
       <Contact />
     </main>
   );

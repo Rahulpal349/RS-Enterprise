@@ -27,78 +27,84 @@ const WhatsappIcon = ({ size = 20 }) => (
 
 export default function Footer() {
   return (
-    <footer className="relative text-white pt-16 pb-8 border-t-[10px] border-primary overflow-hidden">
+    <footer className="relative text-white pt-12 sm:pt-16 pb-24 md:pb-8 border-t-[8px] sm:border-t-[10px] border-primary overflow-hidden">
       {/* Background Image Placeholder */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/footer-bg.jpg')", // Ensure footer-bg.jpg exists in public folder
-          backgroundColor: "#1e293b" // Fallback color
+          backgroundImage: "url('/footer-bg.jpg')",
+          backgroundColor: "#0f172a"
         }}
       >
-        <div className="absolute inset-0 bg-slate-900/80"></div> {/* Dark Overlay for text readability */}
+        <div className="absolute inset-0 bg-slate-950/85"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter mb-4">
-              <span className="text-primary text-3xl">RS</span> ENTERPRISE
+            <Link href="/" className="flex items-center gap-1.5 text-xl sm:text-2xl font-bold tracking-tighter mb-2">
+              <span className="text-primary text-2xl sm:text-3xl font-extrabold">RS</span> ENTERPRISE
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              We are committed to building strong relationships and delivering exceptional construction services.
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-xs">
+              We are committed to building strong relationships and delivering exceptional civil construction services & general order supplies.
             </p>
-            <div className="flex gap-4 pt-2">
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors"><FacebookIcon size={20} /></a>
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors"><InstagramIcon size={20} /></a>
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors"><TwitterIcon size={20} /></a>
-              <a href="https://wa.me/918515902364" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-green-500 transition-colors" title="Chat on WhatsApp"><WhatsappIcon size={20} /></a>
+            <div className="flex gap-2 pt-1">
+              <a href="#" aria-label="Facebook" className="p-2 text-slate-400 hover:text-primary hover:bg-slate-800/80 rounded-lg transition-colors"><FacebookIcon size={18} /></a>
+              <a href="#" aria-label="Instagram" className="p-2 text-slate-400 hover:text-primary hover:bg-slate-800/80 rounded-lg transition-colors"><InstagramIcon size={18} /></a>
+              <a href="#" aria-label="Twitter" className="p-2 text-slate-400 hover:text-primary hover:bg-slate-800/80 rounded-lg transition-colors"><TwitterIcon size={18} /></a>
+              <a href="https://wa.me/918515902364" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-emerald-400 hover:bg-slate-800/80 rounded-lg transition-colors" title="Chat on WhatsApp"><WhatsappIcon size={18} /></a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-primary font-bold uppercase tracking-widest text-sm mb-6">Quick Links</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="#services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link href="#projects" className="hover:text-white transition-colors">Projects</Link></li>
-              <li><Link href="/quote" className="hover:text-white transition-colors">Contact Us</Link></li>
+            <h4 className="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm mb-4 sm:mb-6">Quick Links</h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400">
+              <li><Link href="/" className="hover:text-white transition-colors block py-0.5">Home</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors block py-0.5">About Us</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors block py-0.5">Services</Link></li>
+              <li><Link href="#projects" className="hover:text-white transition-colors block py-0.5">Projects</Link></li>
+              <li><Link href="/quote" className="hover:text-white transition-colors block py-0.5">Contact Us</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-primary font-bold uppercase tracking-widest text-sm mb-6">Our Services</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li>Residential Construction</li>
-              <li>Commercial Construction</li>
-              <li>Renovation & Remodeling</li>
-              <li>Architectural Design</li>
-              <li>Project Management</li>
+            <h4 className="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm mb-4 sm:mb-6">Our Services</h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400">
+              <li className="py-0.5">Residential Construction</li>
+              <li className="py-0.5">Commercial Construction</li>
+              <li className="py-0.5">Renovation & Remodeling</li>
+              <li className="py-0.5">Architectural Design</li>
+              <li className="py-0.5">Project Management</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-primary font-bold uppercase tracking-widest text-sm mb-6">Contact Us</h4>
-            <ul className="space-y-3 text-sm text-slate-400">
+            <h4 className="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm mb-4 sm:mb-6">Contact Us</h4>
+            <ul className="space-y-3 text-xs sm:text-sm text-slate-400">
               <li>
-                <a href="https://wa.me/918515902364" target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition-colors flex items-center gap-2">
+                <a href="https://wa.me/918515902364" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors inline-flex items-center gap-2 font-medium">
                   <WhatsappIcon size={16} /> +91 8515902364
                 </a>
               </li>
-              <li>rsenterpris85@gmail.com</li>
-              <li>Andal Gram, Dhubchururia,<br/>Durgapur, Paschim Bardhaman<br/>West Bengal, 713321</li>
-              <li className="pt-2 text-primary">GSTN: 19AKFR3327G1ZO</li>
+              <li>
+                <a href="mailto:rsenterpris85@gmail.com" className="hover:text-white transition-colors block">
+                  rsenterpris85@gmail.com
+                </a>
+              </li>
+              <li className="leading-relaxed">
+                Andal Gram, Dhubchururia,<br/>Durgapur, Paschim Bardhaman<br/>West Bengal, 713321
+              </li>
+              <li className="pt-1 text-primary font-bold text-xs uppercase tracking-wider">GSTN: 19AKFR3327G1ZO</li>
             </ul>
           </div>
 
         </div>
 
-        <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-slate-800/80 pt-6 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
           <p>© {new Date().getFullYear()} RS ENTERPRISE. All Rights Reserved.</p>
-          <p className="mt-2 md:mt-0">Designed with precision & care.</p>
+          <p>Designed with precision & care.</p>
         </div>
 
       </div>

@@ -47,21 +47,21 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
+    <section className="py-12 sm:py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-[2px] w-12 bg-primary"></div>
-            <h2 className="text-primary font-bold uppercase tracking-widest text-sm">Why Choose Us</h2>
-            <div className="h-[2px] w-12 bg-primary"></div>
+        <div className="text-center mb-10 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3">
+            <div className="h-[2px] w-8 sm:w-12 bg-primary"></div>
+            <h2 className="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm">Why Choose Us</h2>
+            <div className="h-[2px] w-8 sm:w-12 bg-primary"></div>
           </div>
-          <h3 className="text-3xl md:text-5xl font-bold text-secondary dark:text-slate-100">
+          <h3 className="text-2xl sm:text-4xl md:text-5xl font-black text-secondary dark:text-slate-100 tracking-tight">
             Reasons to Work With Us
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {reasons.map((reason, index) => (
             <motion.div
               key={index}
@@ -69,13 +69,13 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center group"
+              className="bg-white dark:bg-slate-800/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/80 flex flex-col items-center text-center group"
             >
-              <div className="text-primary mb-6 p-4 rounded-full bg-slate-50 dark:bg-slate-900 group-hover:bg-primary group-hover:text-secondary transition-colors">
+              <div className="text-primary mb-4 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 group-hover:bg-primary group-hover:text-secondary transition-colors">
                 {reason.icon}
               </div>
-              <h4 className="text-xl font-bold text-secondary dark:text-slate-100 mb-3">{reason.title}</h4>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{reason.description}</p>
+              <h4 className="text-base sm:text-lg font-bold text-secondary dark:text-slate-100 mb-2">{reason.title}</h4>
+              <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">{reason.description}</p>
             </motion.div>
           ))}
         </div>
